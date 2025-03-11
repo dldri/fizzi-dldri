@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@fontface {
+	font-family: Alpino;
+	src: url("../../public/fonts/Alpino-Variable.woff2");
+}
