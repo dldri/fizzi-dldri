@@ -19,7 +19,8 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={alpino.variable}
+			// className={alpino.variable}
+			className="font-alpino font-extrabold"
 		>
 			<body>{children}</body>
 			<PrismicPreview repositoryName={repositoryName} />

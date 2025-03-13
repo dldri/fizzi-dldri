@@ -2,5 +2,9 @@
 
 @fontface {
 	font-family: Alpino;
-	src: url("../../public/fonts/Alpino-Variable.woff2");
+	src: url("/public/fonts/Alpino-Variable.woff2");
+}
+
+@theme {
+	--font-alpino: Alpino, "sans-serif";
 }
