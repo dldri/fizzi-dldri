@@ -12,7 +12,7 @@ export default function RootLayout({
 		<html
 			lang="en"
 			// className={alpino.variable}
-			className="font-alpino font-extrabold"
+			className="font-alpino"
 		>
 			<body>
 				<Header />
