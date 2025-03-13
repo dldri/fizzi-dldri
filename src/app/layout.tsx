@@ -14,7 +14,7 @@ export default function RootLayout({
 			// className={alpino.variable}
 			className="font-alpino"
 		>
-			<body>
+			<body className="overflow-x-hidden bg-yellow-300">
 				<Header />
 				<main>{children}</main>
 			</body>
