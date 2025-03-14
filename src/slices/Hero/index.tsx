@@ -55,8 +55,24 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     const scrollTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".hero",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1.5,
+        markers: true,
       },
     });
+
+    scrollTl.fromTo(
+      "body",
+      {
+        backgroundColor: "#FDE047",
+      },
+      {
+        backgroundColor: "#D9f99D",
+        overwrite: "auto",
+      },
+      1,
+    );
   });
 
   return (
