@@ -1,7 +1,8 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { SodaCan } from "./SodaCan";
+import { Environment } from "@react-three/drei";
+import FloatingCan from "./FloatingCan";
 
 type Props = object;
 
@@ -24,9 +25,8 @@ export default function ViewCanvas({}: Props) {
         fov: 30,
       }}
     >
-      <SodaCan />
-      <ambientLight intensity={2} />
-      <spotLight intensity={3} position={[1, 1, 1]} />
+      <FloatingCan />
+      <Environment files="/hdr/lobby.hdr" environmentIntensity={1.5} />
     </Canvas>
   );
 }
