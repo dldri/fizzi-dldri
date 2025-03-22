@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 @fontface {
-	font-family: Alpino;
-	src: url("/public/fonts/Alpino-Variable.woff2");
+  font-family: Alpino;
+  src:
+    url("/fonts/Alpino-Variable.woff") format("woff"),
+    url("/fonts/Alpino-Variable.woff2") format("woff2");
 }
 
 @theme {
-	--font-alpino: Alpino, "sans-serif";
-	--animate-slide-left: slide-left 3s linear infinite;
-	--animate-spin-slow: spin 6s linear infinite;
+  --font-alpino: Alpino, sans-serif;
+  --animate-slide-left: slide-left 3s linear infinite;
+  --animate-spin-slow: spin 6s linear infinite;
 }
 
 @keyframes slide-left {
-	0% {
-		transform: translateX(0);
-	}
+  0% {
+    transform: translateX(0);
+  }
 
-	100% {
-		transform: translateX(-100%);
-	}
+  100% {
+    transform: translateX(-100%);
+  }
 }
