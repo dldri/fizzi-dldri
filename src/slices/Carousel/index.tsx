@@ -11,6 +11,7 @@ import { Center, Environment, View } from "@react-three/drei";
 import clsx from "clsx";
 import { Group } from "three";
 import gsap from "gsap";
+
 import FloatingCan from "@/components/FloatingCan";
 import { ArrowIcon } from "./ArrowIcon";
 import { WavyCircles } from "./WavyCircles";
@@ -64,12 +65,16 @@ const Carousel: FC<CarouselProps> = ({ slice }) => {
       },
       0,
     )
-      .to(".background, .wavy-circles-outer, .wavy-circles-inner", {
-        backgroundColor: FLAVORS[nextIndex].color,
-        fill: FLAVORS[nextIndex].color,
-        ease: "power2.inOut",
-        duration: 1,
-      })
+      .to(
+        ".background, .wavy-circles-outer, .wavy-circles-inner",
+        {
+          backgroundColor: FLAVORS[nextIndex].color,
+          fill: FLAVORS[nextIndex].color,
+          ease: "power2.inOut",
+          duration: 1,
+        },
+        0,
+      )
       .to(
         ".text-wrapper",
         {
