@@ -4,6 +4,8 @@ import { FC } from "react";
 import { Bounded } from "@/components/Bounded";
 import { asText, Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { View } from "@react-three/drei";
+import Scene from "./Scene";
 
 /**
  * Props for `AlternatingText`.
@@ -19,11 +21,13 @@ const AlternatingText: FC<AlternatingTextProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="alternating-text-container relative text-sky-950"
+      className="alternating-text-container relative bg-yellow-300 text-sky-950"
     >
       <div>
         <div className="relative grid">
-          {/* TODO: View goes here */}
+          <View className="alternating-text-view absolute top-0 left-0 h-screen w-full">
+            <Scene />
+          </View>
           {slice.primary.text_group.map((item, index) => (
             <div
               key={asText(item.heading)}
