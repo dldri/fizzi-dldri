@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+/z_assets
 
 # debug
 npm-debug.log*
