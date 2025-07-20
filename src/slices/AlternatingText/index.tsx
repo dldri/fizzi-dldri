@@ -21,7 +21,7 @@ const AlternatingText: FC<AlternatingTextProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="alternating-text-container relative bg-yellow-300 text-sky-950"
+      className="alternating-text-container relative bg-[#FFDF20] text-sky-950"
     >
       <div>
         <div className="relative grid">
