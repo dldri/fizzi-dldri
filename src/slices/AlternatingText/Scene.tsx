@@ -16,8 +16,8 @@ type Props = {};
 
 export default function Scene({}: Props) {
   const canRef = useRef<Group>(null);
-  const bgColors = ["#FFDF20", "#E9CFF6", "#CBEF9A"];
   const isDesktop = useMediaQuery("( min-width: 768px )", true);
+  const bgColors = ["#FFDF20", "#E9CFF6", "#CBEF9A"];
 
   useGSAP(
     () => {
@@ -60,7 +60,6 @@ export default function Scene({}: Props) {
             {
               y: yRotation,
               ease: "back.inOut",
-              delay: 0,
             },
             "<",
           )

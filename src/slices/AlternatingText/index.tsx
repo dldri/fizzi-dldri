@@ -3,7 +3,11 @@
 import { FC } from "react";
 import { Bounded } from "@/components/Bounded";
 import { asText, Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import {
+  PrismicRichText,
+  PrismicText,
+  SliceComponentProps,
+} from "@prismicio/react";
 import { View } from "@react-three/drei";
 import Scene from "./Scene";
 import clsx from "clsx";
@@ -29,6 +33,7 @@ const AlternatingText: FC<AlternatingTextProps> = ({ slice }) => {
           <View className="alternating-text-view absolute top-0 left-0 h-screen w-full">
             <Scene />
           </View>
+
           {slice.primary.text_group.map((item, index) => (
             <div
               key={asText(item.heading)}
@@ -41,7 +46,7 @@ const AlternatingText: FC<AlternatingTextProps> = ({ slice }) => {
                 )}
               >
                 <h2 className="text-6xl font-bold text-balance">
-                  <PrismicRichText field={item.heading} />
+                  <PrismicText field={item.heading} />
                 </h2>
                 <div className="mt-4 text-xl">
                   <PrismicRichText field={item.body} />
