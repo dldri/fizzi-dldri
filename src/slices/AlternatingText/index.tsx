@@ -6,6 +6,7 @@ import { asText, Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { View } from "@react-three/drei";
 import Scene from "./Scene";
+import clsx from "clsx";
 
 /**
  * Props for `AlternatingText`.
@@ -24,7 +25,7 @@ const AlternatingText: FC<AlternatingTextProps> = ({ slice }) => {
       className="alternating-text-container relative bg-[#FFDF20] text-sky-950"
     >
       <div>
-        <div className="relative grid">
+        <div className="relative z-[100] grid">
           <View className="alternating-text-view absolute top-0 left-0 h-screen w-full">
             <Scene />
           </View>
@@ -34,7 +35,10 @@ const AlternatingText: FC<AlternatingTextProps> = ({ slice }) => {
               className="alternating-section grid h-screen place-items-center gap-x-12 md:grid-cols-2"
             >
               <div
-                className={index % 2 === 0 ? "col-start-1" : "md:col-start-2"}
+                className={clsx(
+                  index % 2 === 0 ? "col-start-1" : "md:col-start-2",
+                  "rounded-lg p-4 backdrop-blur-lg max-md:bg-white/30",
+                )}
               >
                 <h2 className="text-6xl font-bold text-balance">
                   <PrismicRichText field={item.heading} />
